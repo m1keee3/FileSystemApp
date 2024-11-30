@@ -2,19 +2,18 @@
 
 public class FileSystem : IFileSystem
 {
-    public string? CurrentPath { get; private set; }
+    public virtual string? CurrentPath { get; set; }
 
-    public void Connect(string path)
+    public virtual void Connect(string path)
     {
-        /*if (Directory.Exists(path))
+        if (Directory.Exists(path))
         {
             CurrentPath = path;
         }
         else
         {
             throw new DirectoryNotFoundException($"Path '{path}' does not exist");
-        }*/
-        CurrentPath = path;
+        }
     }
 
     public void Disconnect()
