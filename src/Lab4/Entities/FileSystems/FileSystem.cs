@@ -6,14 +6,15 @@ public class FileSystem : IFileSystem
 
     public void Connect(string path)
     {
-        if (Directory.Exists(path))
+        /*if (Directory.Exists(path))
         {
             CurrentPath = path;
         }
         else
         {
             throw new DirectoryNotFoundException($"Path '{path}' does not exist");
-        }
+        }*/
+        CurrentPath = path;
     }
 
     public void Disconnect()
